@@ -1,0 +1,23 @@
+[tool.black]
+line-length = 88
+target-version = ['py37']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+  # directories
+  \.eggs
+  | \.git
+  | build
+  | dist
+)/
+'''
+
+[tool.pytest.ini_options]
+minversion = '6.0'
+addopts = '-ra -q'
+testpaths = [
+    'tests',
+]
+pythonpath = [
+    "src"
+]
